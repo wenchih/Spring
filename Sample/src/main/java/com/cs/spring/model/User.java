@@ -26,14 +26,13 @@ public class User {
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	
-	//��鞈��
+	private int id;	
+
 	private String name;	
-	private String studentid;
+	private int userid;
 	private String email;
 	@DateTimeFormat(pattern="yyyy/MM/dd HH:mm:ss")
-	private Date date;
+	private Date timestamp;
 
 	public int getId() {
 		return id;
@@ -51,12 +50,12 @@ public class User {
 		this.name = name;
 	}
 
-	public String getStudentid() {
-		return studentid;
+	public int getUserid() {
+		return userid;
 	}
 
-	public void setStudentid(String studentid) {
-		this.studentid = studentid;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 	
 	public String getEmail() {
@@ -67,26 +66,26 @@ public class User {
 		this.email = email;
 	}
 	
-	public Date getDate() {
-		return date;
+	public Date getTimestamp() {
+		return timestamp;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
 	}
 	
 	
 	
 	
-	@Override
-	public String toString(){
-		
-		return "["
-		+ "{\"id\":"+ id+","
-		+ "\"name\":\""+ name +"\","
-		+ "\"studentid\":"+ studentid +","
-		+ "\"email\":\""+ email +"}]" ;		
-	}
+//	@Override
+//	public String toString(){
+//		
+//		return "["
+//		+ "{\"id\":"+ id+","
+//		+ "\"name\":\""+ name +"\","
+//		+ "\"userid\":"+ userid +","
+//		+ "\"email\":\""+ email +"}]" ;		
+//	}
 	
 	//new
 

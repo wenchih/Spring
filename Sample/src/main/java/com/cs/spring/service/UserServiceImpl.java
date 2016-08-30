@@ -18,40 +18,54 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public void addPerson(User p) {
-		this.userDAO.addPerson(p);
+	public void add(User p) {
+		this.userDAO.add(p);
 	}
 
 	@Override
 	@Transactional	
 	//@CacheEvict(value="accountCache",key="#p.getId()")
-	public void updatePerson(User p) {
+	public void update(User p) {
 		System.out.println("real query account2"); 
-		this.userDAO.updatePerson(p);
+		this.userDAO.update(p);
 	}
 
 	@Override
 	@Transactional
 	//@Cacheable(value="accountCache2")
-	public List<User> listPersons() {
+	public List<User> list() {
 		System.out.println("real query account1."); 
-		return this.userDAO.listPersons();
+		return this.userDAO.list();
 	}
 
 	@Override
 	@Transactional
 	//@Cacheable(value="accountCache")
-	public User getPersonById(int id) {
+	public User getById(int id) {
 		
-		return this.userDAO.getPersonById(id);
+		return this.userDAO.getById(id);
 	}
-	
-
 	
 	@Override
 	@Transactional
-	public void removePerson(int id) {
-		this.userDAO.removePerson(id);
+	public List<User> getByUserid(int userid){
+		
+		return this.userDAO.getByUserid(userid);
+	}
+	
+	
+	
+	
+	@Override
+	@Transactional
+	public void removeAll(){
+		this.userDAO.removeAll();		
+	}
+	
+	@Override
+	@Transactional
+	public void removeById(int id) {
+		this.userDAO.removeById(id);
 	}
 
 }

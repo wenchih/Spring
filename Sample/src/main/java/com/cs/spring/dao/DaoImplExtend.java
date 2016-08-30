@@ -3,7 +3,7 @@ package com.cs.spring.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-public class AbstractDaoImpl {
+public class DaoImplExtend {
 
 	private SessionFactory sessionFactory;
 

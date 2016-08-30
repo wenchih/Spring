@@ -81,7 +81,7 @@
 	
 	<tr class="info">
 		<td >
-			<form:label path="studentid">
+			<form:label path="name">
 				<spring:message text="Name:"/>
 			</form:label>
 		</td>
@@ -92,23 +92,23 @@
 	
 	<tr class="success">
 		<td >
-			<form:label path="studentid">
-				<spring:message text="Studentid"/>
+			<form:label path="userid">
+				<spring:message text="Userid"/>
 			</form:label>
 		</td>
 		<td>
-			<form:input path="studentid" class="form-control" placeholder="150753023" />
+			<form:input path="userid" class="form-control" placeholder="150753023" />
 		</td>
 	</tr>
 	
 		<tr class="warning">
 		<td>
-			<form:label path="date">
-				<spring:message text="Date"/>
+			<form:label path="timestamp">
+				<spring:message text="Timestamp"/>
 			</form:label>
 		</td>
 		<td>
-			<form:input path="date" class="form-control" placeholder="2020/12/12 08:00:12" />
+			<form:input path="timestamp" class="form-control" placeholder="2020/12/12 08:00:12" />
 		</td> 
 	</tr>
 	
@@ -151,9 +151,9 @@
 		<tr class="info">
 		<th>ID</th>
 		<th>Name</th>
-		<th>Studentid</th>
+		<th>Userid</th>
 		<th>Email</th>
-		<th>Date</th>
+		<th>Timestamp</th>
 	
 
 		<th >Edit</th>
@@ -164,9 +164,9 @@
 	<tr>
 		<th >ID</th>
 		<th>Name</th>
-		<th>Studentid</th>
+		<th>Userid</th>
 		<th>Email</th>
-		<th>Date</th>
+		<th>Timestamp</th>
 	
 
 		<th >Edit</th>
@@ -183,9 +183,9 @@
 		<tr>
 			<td>${user.id}</td>
 			<td>${user.name}</td>
-			<td>${user.studentid}</td>
+			<td>${user.userid}</td>
 			<td>${user.email}</td>
-			<td>${user.date}</td>
+			<td>${user.timestamp}</td>
 		
 			
 			<td><a href="<c:url value='/user/edit/${user.id}' />" >Edit</a></td>

@@ -6,11 +6,12 @@ import com.cs.spring.model.User;
 
 public interface UserService {
 
-	public void addPerson(User p);
-	public void updatePerson(User p);
-	public List<User> listPersons();
-	public User getPersonById(int id);
-	
-	public void removePerson(int id);
+	public void add(User p);
+	public void update(User p);
+	public List<User> list();
+	public User getById(int id);
+	public List<User> getByUserid(int userid);
+	public void removeAll();
+	public void removeById(int id);
 	
 }

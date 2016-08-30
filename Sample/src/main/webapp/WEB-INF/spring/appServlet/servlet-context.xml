@@ -85,9 +85,9 @@
 		destroy-method="close">
 		<beans:property name="driverClass" value="org.mariadb.jdbc.Driver" />
 		<beans:property name="jdbcUrl"
-			value="jdbc:mysql://**********:3306/Sample" />
-		<beans:property name="user" value="****" />
-		<beans:property name="password" value="******" />	
+			value="jdbc:mysql://xxx.xxx.xxx.xxx:3306/Sample" />
+		<beans:property name="user" value="xxxx" />
+		<beans:property name="password" value="xxxxxx" />	
 			
 			
 		<beans:property name="maxPoolSize" value="50"/>
@@ -136,7 +136,7 @@
   
 
 
-	<beans:bean id="abstractDao" class="com.cs.spring.dao.AbstractDaoImpl">
+	<beans:bean id="abstractDao" class="com.cs.spring.dao.DaoImplExtend">
 	<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
 	</beans:bean>
 	
